@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- To keep the form at the center of the page I am giving all the content of the form in a div tag with class container -->
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>Register</h1>
+    </header>
+    <form id="registration-form" action="#" method="POST">
+        <!-- To give a better look to the form I am separating the required fields into two different categories- Personal Information
+         and Additional information. Both of them are given in a separate field set to be have better clarity and design -->
+         <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name">
+    
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8" placeholder="Enter a password">
+    
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required minlength="8" placeholder="Re-enter your password">
+          </fieldset>
+    
+          <fieldset>
+            <legend>Additional Details</legend>
+            <label>Gender:</label>
+            <div>
+              <input type="radio" id="male" name="gender" value="Male">
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="Female">
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="Other">
+              <label for="other">Other</label>
+            </div>
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+    
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required placeholder="Enter your address"></textarea>
+    
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="">Select a country</option>
+              <option value="india">India</option>
+              <option value="usa">United States</option>
+              <option value="canada">Canada</option>
+              <option value="uk">United Kingdom</option>
+              <option value="australia">Australia</option>
+              <option value="others">Others</option>
+            </select>
+    
+            <div class="terms">
+              <input type="checkbox" id="terms" name="terms" required>
+              <label for="terms">I agree to the Terms and Conditions</label>
+            </div>
+          </fieldset>
+
+      <div class="form-actions">
+        <button type="button" onclick="validateForm()">Register</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
